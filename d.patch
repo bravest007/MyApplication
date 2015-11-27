@@ -1,0 +1,853 @@
+Index: webview/src/test/java/com/example/designer/myapplication/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/test/java/com/example/designer/myapplication/ExampleUnitTest.java	(revision )
++++ webview/src/test/java/com/example/designer/myapplication/ExampleUnitTest.java	(revision )
+@@ -0,0 +1,15 @@
++package com.example.designer.myapplication;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * To work on unit tests, switch the Test Artifact in the Build Variants view.
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() throws Exception {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: webview/src/main/res/layout/content_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/layout/content_main.xml	(revision )
++++ webview/src/main/res/layout/content_main.xml	(revision )
+@@ -0,0 +1,40 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:orientation="vertical"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior"
++    tools:context="com.example.designer.myapplication.MainActivity"
++    tools:showIn="@layout/activity_main">
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++        <EditText
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:id="@+id/edtUrl"
++            android:layout_weight="1"
++            android:singleLine="true"
++            android:hint="URL을 입력하세요."
++            />
++        <Button
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:id="@+id/btnGo"
++            android:text="이동"/>
++        <Button
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:id="@+id/btnBack"
++            android:text="이전"/>
++    </LinearLayout>
++    <WebView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:id="@+id/webView1">
++
++    </WebView>
++
++</LinearLayout>
+Index: calc/calc.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- calc/calc.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ calc/calc.iml	(revision )
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id=":calc" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplicationwww" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++<module external.linked.project.id=":calc" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="android-gradle" name="Android-Gradle">
+       <configuration>
+@@ -65,21 +65,10 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+\ No newline at end of file
+Index: calc2/calc2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- calc2/calc2.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ calc2/calc2.iml	(revision )
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id=":calc2" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplicationwww" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++<module external.linked.project.id=":calc2" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="android-gradle" name="Android-Gradle">
+       <configuration>
+@@ -65,21 +65,10 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ .idea/modules.xml	(revision )
+@@ -2,12 +2,13 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/MyApplicationwww.iml" filepath="$PROJECT_DIR$/MyApplicationwww.iml" />
++      <module fileurl="file://$PROJECT_DIR$/MyApplication1.iml" filepath="$PROJECT_DIR$/MyApplication1.iml" />
+       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+       <module fileurl="file://$PROJECT_DIR$/button/button.iml" filepath="$PROJECT_DIR$/button/button.iml" />
+       <module fileurl="file://$PROJECT_DIR$/calc/calc.iml" filepath="$PROJECT_DIR$/calc/calc.iml" />
+       <module fileurl="file://$PROJECT_DIR$/calc2/calc2.iml" filepath="$PROJECT_DIR$/calc2/calc2.iml" />
+       <module fileurl="file://$PROJECT_DIR$/image/image.iml" filepath="$PROJECT_DIR$/image/image.iml" />
++      <module fileurl="file://$PROJECT_DIR$/webview/webview.iml" filepath="$PROJECT_DIR$/webview/webview.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: button/button.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- button/button.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ button/button.iml	(revision )
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id=":button" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplicationwww" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++<module external.linked.project.id=":button" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="android-gradle" name="Android-Gradle">
+       <configuration>
+@@ -65,21 +65,10 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+\ No newline at end of file
+Index: webview/src/main/res/menu/menu_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/menu/menu_main.xml	(revision )
++++ webview/src/main/res/menu/menu_main.xml	(revision )
+@@ -0,0 +1,10 @@
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    tools:context="com.example.designer.myapplication.MainActivity">
++    <item
++        android:id="@+id/action_settings"
++        android:orderInCategory="100"
++        android:title="@string/action_settings"
++        app:showAsAction="never" />
++</menu>
+Index: webview/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/AndroidManifest.xml	(revision )
++++ webview/src/main/AndroidManifest.xml	(revision )
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.example.designer.myapplication">
++    <uses-permission android:name="android.permission.INTERNET"/>
++
++    <application
++        android:allowBackup="true"
++        android:icon="@drawable/emo_im_cool"
++        android:label="쿡북 웹브라우저"
++        android:logo="@drawable/web"
++        android:supportsRtl="true"
++        android:theme="@style/AppTheme">
++        <activity
++            android:name=".MainActivity"
++            android:label="간단 웹브라우저"
++            android:theme="@style/AppTheme.NoActionBar">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++    </application>
++
++</manifest>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ .idea/vcs.xml	(revision )
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="" />
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: webview/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values-w820dp/dimens.xml	(revision )
++++ webview/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
++         (such as screen margins) for screens with more than 820dp of available width. This
++         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
++    <dimen name="activity_horizontal_margin">64dp</dimen>
++</resources>
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- settings.gradle	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ settings.gradle	(revision )
+@@ -1,1 +1,1 @@
+-include ':app', ':button', ':calc', ':image', ':calc2'
++include ':app', ':button', ':calc', ':image', ':calc2', ':webview'
+Index: webview/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/layout/activity_main.xml	(revision )
++++ webview/src/main/res/layout/activity_main.xml	(revision )
+@@ -0,0 +1,34 @@
++<?xml version="1.0" encoding="utf-8"?>
++<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:fitsSystemWindows="true"
++    tools:context="com.example.designer.myapplication.MainActivity">
++
++    <android.support.design.widget.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:theme="@style/AppTheme.AppBarOverlay">
++
++        <android.support.v7.widget.Toolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize"
++            android:background="?attr/colorPrimary"
++            app:popupTheme="@style/AppTheme.PopupOverlay" />
++
++    </android.support.design.widget.AppBarLayout>
++
++    <include layout="@layout/content_main" />
++
++    <android.support.design.widget.FloatingActionButton
++        android:id="@+id/fab"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="bottom|end"
++        android:layout_margin="@dimen/fab_margin"
++        android:src="@android:drawable/ic_dialog_email" />
++
++</android.support.design.widget.CoordinatorLayout>
+Index: webview/src/main/res/values-v21/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values-v21/styles.xml	(revision )
++++ webview/src/main/res/values-v21/styles.xml	(revision )
+@@ -0,0 +1,9 @@
++<resources>>
++
++    <style name="AppTheme.NoActionBar">
++        <item name="windowActionBar">false</item>
++        <item name="windowNoTitle">true</item>
++        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
++        <item name="android:statusBarColor">@android:color/transparent</item>
++    </style>
++</resources>
+Index: webview/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values/styles.xml	(revision )
++++ webview/src/main/res/values/styles.xml	(revision )
+@@ -0,0 +1,20 @@
++<resources>
++
++    <!-- Base application theme. -->
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++        <!-- Customize your theme here. -->
++        <item name="colorPrimary">@color/colorPrimary</item>
++        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
++        <item name="colorAccent">@color/colorAccent</item>
++    </style>
++
++    <style name="AppTheme.NoActionBar">
++        <item name="windowActionBar">false</item>
++        <item name="windowNoTitle">true</item>
++    </style>
++
++    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
++
++    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
++
++</resources>
+Index: webview/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values/colors.xml	(revision )
++++ webview/src/main/res/values/colors.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="colorPrimary">#3F51B5</color>
++    <color name="colorPrimaryDark">#303F9F</color>
++    <color name="colorAccent">#FF4081</color>
++</resources>
+Index: webview/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values/dimens.xml	(revision )
++++ webview/src/main/res/values/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Default screen margins, per the Android Design guidelines. -->
++    <dimen name="activity_horizontal_margin">16dp</dimen>
++    <dimen name="activity_vertical_margin">16dp</dimen>
++    <dimen name="fab_margin">16dp</dimen>
++</resources>
+Index: webview/webview.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/webview.iml	(revision )
++++ webview/webview.iml	(revision )
+@@ -0,0 +1,94 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id=":webview" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="android-gradle" name="Android-Gradle">
++      <configuration>
++        <option name="GRADLE_PROJECT_PATH" value=":webview" />
++      </configuration>
++    </facet>
++    <facet type="android" name="Android">
++      <configuration>
++        <option name="SELECTED_BUILD_VARIANT" value="debug" />
++        <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />
++        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
++        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
++        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugAndroidTest" />
++        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDebugAndroidTestSources" />
++        <afterSyncTasks>
++          <task>generateDebugAndroidTestSources</task>
++          <task>generateDebugSources</task>
++        </afterSyncTasks>
++        <option name="ALLOW_USER_CONFIGURATION" value="false" />
++        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
++        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
++        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />
++        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
++    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
++    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/debug" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
++      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
++    </content>
++    <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
++    <orderEntry type="library" exported="" name="support-v4-23.1.1" level="project" />
++    <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
++    <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
++    <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: webview/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/build.gradle	(revision )
++++ webview/build.gradle	(revision )
+@@ -0,0 +1,27 @@
++apply plugin: 'com.android.application'
++
++android {
++    compileSdkVersion 23
++    buildToolsVersion "23.0.2"
++
++    defaultConfig {
++        applicationId "com.example.designer.myapplication"
++        minSdkVersion 15
++        targetSdkVersion 23
++        versionCode 1
++        versionName "1.0"
++    }
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++        }
++    }
++}
++
++dependencies {
++    compile fileTree(dir: 'libs', include: ['*.jar'])
++    testCompile 'junit:junit:4.12'
++    compile 'com.android.support:appcompat-v7:23.1.1'
++    compile 'com.android.support:design:23.1.1'
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ .idea/misc.xml	(revision )
+@@ -37,7 +37,7 @@
+     <ConfirmationsSetting value="0" id="Add" />
+     <ConfirmationsSetting value="0" id="Remove" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+\ No newline at end of file
+Index: image/image.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- image/image.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ image/image.iml	(revision )
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id=":image" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplicationwww" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++<module external.linked.project.id=":image" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="android-gradle" name="Android-Gradle">
+       <configuration>
+@@ -65,24 +65,17 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/debug" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
++      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
+       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+     </content>
+\ No newline at end of file
+Index: webview/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/.gitignore	(revision )
++++ webview/.gitignore	(revision )
+@@ -0,0 +1,1 @@
++/build
+Index: webview/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/proguard-rules.pro	(revision )
++++ webview/proguard-rules.pro	(revision )
+@@ -0,0 +1,17 @@
++# Add project specific ProGuard rules here.
++# By default, the flags in this file are appended to flags specified
++# in C:\Users\Designer\AppData\Local\Android\sdk/tools/proguard/proguard-android.txt
++# You can edit the include path and order by changing the proguardFiles
++# directive in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# Add any project specific keep options here:
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
+Index: MyApplicationwww.iml
+===================================================================
+--- MyApplicationwww.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ MyApplicationwww.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
+@@ -1,19 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id="MyApplicationwww" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+-  <component name="FacetManager">
+-    <facet type="java-gradle" name="Java-Gradle">
+-      <configuration>
+-        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />
+-        <option name="BUILDABLE" value="false" />
+-      </configuration>
+-    </facet>
+-  </component>
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: webview/src/androidTest/java/com/example/designer/myapplication/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/androidTest/java/com/example/designer/myapplication/ApplicationTest.java	(revision )
++++ webview/src/androidTest/java/com/example/designer/myapplication/ApplicationTest.java	(revision )
+@@ -0,0 +1,13 @@
++package com.example.designer.myapplication;
++
++import android.app.Application;
++import android.test.ApplicationTestCase;
++
++/**
++ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
++ */
++public class ApplicationTest extends ApplicationTestCase<Application> {
++    public ApplicationTest() {
++        super(Application.class);
++    }
++}
+\ No newline at end of file
+Index: webview/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/res/values/strings.xml	(revision )
++++ webview/src/main/res/values/strings.xml	(revision )
+@@ -0,0 +1,4 @@
++<resources>
++    <string name="app_name">My Application</string>
++    <string name="action_settings">Settings</string>
++</resources>
+Index: app/app.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/app.iml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ app/app.iml	(revision )
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplicationwww" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="MyApplication1" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="android-gradle" name="Android-Gradle">
+       <configuration>
+@@ -65,25 +65,15 @@
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
+       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
++      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+     </content>
+     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+\ No newline at end of file
+Index: MyApplication1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- MyApplication1.iml	(revision )
++++ MyApplication1.iml	(revision )
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id="MyApplication1" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="java-gradle" name="Java-Gradle">
++      <configuration>
++        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />
++        <option name="BUILDABLE" value="false" />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision a75e1ee9d4eedb24d9f38d4f5a0234110dd332bb)
++++ .idea/gradle.xml	(revision )
+@@ -14,6 +14,7 @@
+             <option value="$PROJECT_DIR$/calc" />
+             <option value="$PROJECT_DIR$/calc2" />
+             <option value="$PROJECT_DIR$/image" />
++            <option value="$PROJECT_DIR$/webview" />
+           </set>
+         </option>
+       </GradleProjectSettings>
+\ No newline at end of file
+Index: webview/src/main/java/com/example/designer/myapplication/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- webview/src/main/java/com/example/designer/myapplication/MainActivity.java	(revision )
++++ webview/src/main/java/com/example/designer/myapplication/MainActivity.java	(revision )
+@@ -0,0 +1,57 @@
++package com.example.designer.myapplication;
++
++import android.os.Bundle;
++import android.support.design.widget.FloatingActionButton;
++import android.support.design.widget.Snackbar;
++import android.support.v7.app.AppCompatActivity;
++import android.support.v7.widget.Toolbar;
++import android.view.View;
++import android.view.Menu;
++import android.view.MenuItem;
++import android.webkit.WebSettings;
++import android.webkit.WebView;
++import android.webkit.WebViewClient;
++import android.widget.Button;
++import android.widget.EditText;
++
++public class MainActivity extends AppCompatActivity {
++    EditText edtUrl;
++    Button btnGo,btnBack;
++    WebView web;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++
++        edtUrl = (EditText) findViewById(R.id.edtUrl);
++        btnGo = (Button) findViewById(R.id.btnGo);
++        btnBack = (Button) findViewById(R.id.btnBack);
++        web = (WebView) findViewById(R.id.webView1);
++
++        web.setWebViewClient(new CookWebViewClient());
++
++        WebSettings webSet = web.getSettings();
++        webSet.setBuiltInZoomControls(true);
++
++        btnGo.setOnClickListener(new View.OnClickListener(){
++            public void onClick(View v){
++                web.loadUrl(edtUrl.getText().toString());
++            }
++        });
++
++        btnBack.setOnClickListener(new View.OnClickListener(){
++            public void onClick(View v){
++                web.goBack();
++            }
++        });
++    }
++
++    class CookWebViewClient extends WebViewClient {
++        @Override
++        public boolean shouldOverrideUrlLoading(WebView view, String url) {
++            return super.shouldOverrideUrlLoading(view, url);
++        }
++    }
++
++}
