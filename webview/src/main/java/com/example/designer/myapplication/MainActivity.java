@@ -1,5 +1,6 @@
 package com.example.designer.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,11 +14,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity {
     EditText edtUrl;
-    Button btnGo,btnBack;
+    Button btnGo, btnBack;
     WebView web;
+    String[] address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,33 +27,64 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         edtUrl = (EditText) findViewById(R.id.edtUrl);
-        btnGo = (Button) findViewById(R.id.btnGo);
+        btnGo = (Button)findViewById(R.id.btnGo);
         btnBack = (Button) findViewById(R.id.btnBack);
-        web = (WebView) findViewById(R.id.webView1);
+        web =(WebView) findViewById(R.id.webView1);
 
         web.setWebViewClient(new CookWebViewClient());
-
         WebSettings webSet = web.getSettings();
         webSet.setBuiltInZoomControls(true);
 
-        btnGo.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                web.loadUrl(edtUrl.getText().toString());
+
+
+        btnGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str = edtUrl.getText().toString();
+                boolean strconfirm = str.contains("http://");
+                if (strconfirm == true) {
+                    web.loadUrl(edtUrl.getText().toString());
+                } else if (strconfirm == false){
+                    edtUrl.setText("http://" + edtUrl.getText().toString());
+                    web.loadUrl(edtUrl.getText().toString());
+
+
+                }
+
+
             }
         });
 
-        btnBack.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 web.goBack();
             }
         });
-    }
 
+
+    }
     class CookWebViewClient extends WebViewClient {
         @Override
+
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            return super.shouldOverrideUrlLoading(view, url);
+            return false;
+
         }
+        public void onPageFinished(WebView view,String url){
+            super.onPageFinished(view,url);
+
+            edtUrl.setText(url);
+
+        }
+
+
     }
 
+
 }
+
+
+
+
+
