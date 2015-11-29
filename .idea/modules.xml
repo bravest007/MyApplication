@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyApplication1.iml" filepath="$PROJECT_DIR$/MyApplication1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyApplication15.iml" filepath="$PROJECT_DIR$/MyApplication15.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/button/button.iml" filepath="$PROJECT_DIR$/button/button.iml" />
       <module fileurl="file://$PROJECT_DIR$/calc/calc.iml" filepath="$PROJECT_DIR$/calc/calc.iml" />
       <module fileurl="file://$PROJECT_DIR$/calc2/calc2.iml" filepath="$PROJECT_DIR$/calc2/calc2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diary/diary.iml" filepath="$PROJECT_DIR$/diary/diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/image/image.iml" filepath="$PROJECT_DIR$/image/image.iml" />
       <module fileurl="file://$PROJECT_DIR$/task/task.iml" filepath="$PROJECT_DIR$/task/task.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testmodule/testmodule.iml" filepath="$PROJECT_DIR$/testmodule/testmodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/webview/webview.iml" filepath="$PROJECT_DIR$/webview/webview.iml" />
     </modules>
   </component>

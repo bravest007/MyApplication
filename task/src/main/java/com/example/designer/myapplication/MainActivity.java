@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("1092079 diary");
+        setTitle("정원영 diary");
 
         textView1 = (TextView) findViewById(R.id.textView1);
         button1 = (Button) findViewById(R.id.button1);
@@ -174,7 +174,7 @@ public class MainActivity extends Activity {
         super.onCreateOptionsMenu(menu);
         MenuInflater mInflater = getMenuInflater();
         // Inflate the menu; this adds items to the action bar if it is present.
-        mInflater.inflate(R.menu.menu_sub, menu);
+        mInflater.inflate(R.menu.menu_content, menu);
         return true;
     }
 
@@ -191,7 +191,7 @@ public class MainActivity extends Activity {
 
                 dialogtext2 =(TextView) dialogView.findViewById(R.id.dialogText2);
 
-                dlg.setTitle("일기삭제");
+                dlg.setTitle("일기 삭제");
 
                 dialogtext2.setText(textView1.getText().toString() + "일기를 삭제하시겠습니까?");
 
@@ -202,38 +202,30 @@ public class MainActivity extends Activity {
                     public void onClick(DialogInterface dialog, int which) {
                         File file = new File("/data/data/com.example.user.myapplication/files/" + fileName);
                         file.delete();
-                        Toast.makeText(getApplicationContext(), "삭제했습니다.", Toast.LENGTH_SHORT).show();
-                        editText1.setText(" ");
-                        /*
-                          final String strSDpath = Environment.getExternalStorageDirectory().getAbsolutePath();
-                              File file = new Filie(strSDpath+"/mydiary/"+fileName);
-                              file.delete();
+                        editText1.setText("");
+                        Toast.makeText(getApplicationContext(), "삭제 했습니다.", Toast.LENGTH_SHORT).show();
 
-                         */
-
+                        //String strSDpath = Environment.getExternalStorageDirectory().getAbsolutePath();
+                        //File file = new File(strSDpath + "/mydiary/" + fileName);
+                        //file.delete();
+                        //Toast.makeText(getApplicationContext(), "삭제했습니다.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-                dlg.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-
-                    }
-                });
+                dlg.setNegativeButton("취소", null);
 
                 dlg.show();
 
-
             case R.id.large:
-                editText1.setTextSize(100.0f);
-                break;
-            case R.id.medium:
-                editText1.setTextSize(50.0f);
-                break;
-            case R.id.small:
                 editText1.setTextSize(30.0f);
                 break;
+            case R.id.medium:
+                editText1.setTextSize(20.0f);
+                break;
+            case R.id.small:
+                editText1.setTextSize(10.0f);
+                break;
+
 
         }
         // Handle action bar item clicks here. The action bar will
