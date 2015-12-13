@@ -8,12 +8,10 @@
         android:icon="@drawable/emo_im_cool"
         android:label="쿡북 웹브라우저"
         android:logo="@drawable/web"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="간단 웹브라우저"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="간단 웹브라우저">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
